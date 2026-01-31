@@ -221,11 +221,7 @@ public class JsonParser {
             case 'f':
             case 'n': return parseKeyword();
             default: 
-                throw new JsonParseException(
-                    "Unexpected character. Expected: string, object, array, number, or boolean/null", 
-                    index, 
-                    currentChar
-                );
+                throw new JsonParseException("Unexpected character. Expected: string, object, array, number, or boolean/null", index, currentChar);
         }
     }
     
@@ -240,4 +236,5 @@ public class JsonParser {
         
         return result;
     }
+
 }
